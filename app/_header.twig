@@ -20,3 +20,12 @@
 			</form>
 	</div>
 </header>
+
+<style type="text/css">
+	{% for row,colour in stages %}
+	.item-{{ loop.index0 }} {
+		background:{{ colour }};
+	}
+	{% endfor %}
+
+</style>

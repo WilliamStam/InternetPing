@@ -18,19 +18,22 @@ class home extends _ {
 		}
 		
 		$stages = array(
-			"0-20",
-			"20-50",
-			"50-100",
-			"100-150",
-			"150-200",
-			"200+",
-			"failed"	
+			"0-20"=>"#00ff00",
+			"20-50"=>"#88ff44",
+			"50-100"=>"#caff36",
+			"100-150"=>"#ffb664",
+			"150-200"=>"#ffa354",
+			"200+"=>"#ff7e63",
+			"failed"=>"#ff0000"	
 		);
 		$statsStages = array();
 		$stagesExploded = array();
+		$index = 0;
 		foreach ($stages as $key=>$item){
-			$stagesExploded[$key] = explode("-",$item);
-			$statsStages[$key] = 0;
+			$stagesExploded[$index] = explode("-",$key);
+			$statsStages[$index] = 0;
+			
+			$index = $index+1;
 		}
 		
 		//test_array($statsStages); 
