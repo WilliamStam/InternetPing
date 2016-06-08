@@ -1,0 +1,52 @@
+#chart-area {
+  overflow-y: hidden;
+  overflow-x: auto;
+  font-size: 0;
+  white-space: nowrap;
+}
+#chart-area div#inner {
+  transform-origin: 0 0;
+  float: left;
+}
+#chart-area .item {
+  display: inline-block;
+  vertical-align: bottom;
+  width: 1px;
+  margin-right: 0px;
+}
+#chart-area .seperator {
+  background: #f1f1f1;
+  height: 100%;
+  width: 20px;
+  position: relative;
+  border-left: 1px solid #000;
+  border-right: 1px solid #000;
+}
+#chart-area .seperator div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 11px;
+  font-weight: bold;
+  transform: translateX(-50%) translateY(-50%) rotate(-90deg);
+}
+.item-0 {
+  background: #00ff00;
+}
+.item-1 {
+  background: #bbff30;
+}
+.item-2 {
+  background: #ffb34f;
+}
+.item-3 {
+  background: #ff6966;
+}
+.item-4 {
+  background: #ff0000;
+}
+#footer .item {
+  width: 20px;
+  display: inline-block;
+  margin-right: 10px;
+}

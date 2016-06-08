@@ -1,0 +1,18 @@
+<header id="header">
+	<div class="container">
+		
+		<form class="form-inline">
+		<select name="logfile-select" id="logfile-select" class="form-control">
+			<option value="">Today</option>
+			<optgroup label="Log Files">
+				{% for row in logs %}
+					<option value="{{ row }}" {% if file == row %}selected="selected"{% endif %}>{{ row }}</option>
+				{% endfor %}
+			</optgroup>
+			
+		</select>
+			<p class="form-control-static" style="margin-left:50px;">{{ data[0][0] }} - to - {{ data|last[0] }}</p>
+		
+			</form>
+	</div>
+</header>

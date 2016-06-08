@@ -1,0 +1,76 @@
+{
+  "name": "Impreshin/ImpreshinWebsite",
+  "description": "Impreshin Website",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "William Stam",
+      "email": "william@impreshin.com"
+    }
+  ],
+  "config": {
+    "optimize-autoloader": true
+  },
+  "repositories": [
+    
+    {
+      "type": "package",
+      "package": {
+        "name": "components/jQote2",
+        "version": "dev-master",
+        "source": {
+          "url": "https://github.com/aefxx/jQote2",
+          "type": "git",
+          "reference": "origin/master"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "components/jQuery-Parallax",
+        "version": "dev-master",
+        "source": {
+          "url": "https://github.com/aledelgo/jQuery-Parallax",
+          "type": "git",
+          "reference": "origin/master"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "components/jQuery-Backstretch",
+        "version": "dev-master",
+        "source": {
+          "url": "https://github.com/srobbin/jquery-backstretch",
+          "type": "git",
+          "reference": "origin/master"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "components/isotope",
+        "version": "dev-master",
+        "source": {
+          "url": "https://github.com/metafizzy/isotope",
+          "type": "git",
+          "reference": "origin/master"
+        }
+      }
+    }
+    
+  ],
+  "require": {
+    "components/jquery": "2.*",
+    "components/bootstrap": "3.*",
+    "twig/twig": "*",
+    "components/modernizr": "*",
+    "bcosca/fatfree": "3.*",
+    "components/Font-Awesome": "4.*",
+    "ivaynberg/select2": "4.*"
+  }
+}
