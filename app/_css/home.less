@@ -4,11 +4,24 @@
   font-size: 0;
   white-space: nowrap;
   div#inner {
-   
     transform-origin: 0 0;
     float: left;
+    &:hover {
+      .hour {
+        opacity:0.3;
+      }
+    }
   }
- 
+ .hour {
+   transform-origin: 0 0;
+   height:100%;
+   display: inline-block;
+   &:hover {
+     cursor:pointer;
+     background: #f1f1f1;
+     opacity:1!important;
+   }
+ }
   .item {
     display: inline-block;
    

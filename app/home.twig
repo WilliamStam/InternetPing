@@ -2,6 +2,7 @@
 	<div id="chart-area">
 		<div id="inner">
 			<div style="height: {{ max }}px;">
+				<div>
 				{% for row in data %}
 					{% set h = row[1] %}
 					{% set color = "" %}
@@ -18,6 +19,10 @@
 						{% set color = "0" %}
 					{% endif %}
 					{% if row[2]!='' %}
+						
+							</div>
+						
+						<div class="hour">
 						<div class="item seperator">
 							
 							{% set lab = "AM" %}
@@ -27,9 +32,11 @@
 							
 							<div>{{ row[2] }}{{ lab }}</div>
 						</div>
+						
 					{% endif %}
 					<div class="item item-{{ color }}" style="height:{{ h }}px;" title="{{ row[0] }} - {{ row[1] }}"></div>
 				{% endfor %}
+						</div>
 			</div>
 		</div>
 		

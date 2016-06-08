@@ -8,6 +8,19 @@
   transform-origin: 0 0;
   float: left;
 }
+#chart-area div#inner:hover .hour {
+  opacity: 0.3;
+}
+#chart-area .hour {
+  transform-origin: 0 0;
+  height: 100%;
+  display: inline-block;
+}
+#chart-area .hour:hover {
+  cursor: pointer;
+  background: #f1f1f1;
+  opacity: 1!important;
+}
 #chart-area .item {
   display: inline-block;
   vertical-align: bottom;
