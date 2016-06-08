@@ -12,6 +12,10 @@
 			
 		</select>
 			<p class="form-control-static" style="margin-left:50px;">{{ data[0][0] }} - to - {{ data|last[0] }}</p>
+			<p class="form-control-static" style="margin-left:50px;"><strong>{{ stats['failed'] }}</strong>
+				failed of <strong>{{ stats['total'] }}</strong>
+				= <strong>{{ stats['percent'] }}%</strong>
+				down</p>
 		
 			</form>
 	</div>

@@ -47,15 +47,21 @@
   background: #00ff00;
 }
 .item-1 {
-  background: #bbff30;
+  background: #88ff44;
 }
 .item-2 {
-  background: #ffb34f;
+  background: #caff36;
 }
 .item-3 {
-  background: #ff6966;
+  background: #ffb664;
 }
 .item-4 {
+  background: #ffa354;
+}
+.item-5 {
+  background: #ff7e63;
+}
+.item-6 {
   background: #ff0000;
 }
 #footer .item {

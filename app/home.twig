@@ -5,20 +5,11 @@
 				<div>
 				{% for row in data %}
 					{% set h = row[1] %}
-					{% set color = "" %}
+					
 					{% if row[1] == '-' %}
-						{% set color = "4" %}
 						{% set h = max %}
-					{% elseif row[1] > 200 %}
-						{% set color = "3" %}
-					{% elseif row[1] > 100 %}
-						{% set color = "2" %}
-					{% elseif row[1] > 50 %}
-						{% set color = "1" %}
-					{% else %}
-						{% set color = "0" %}
 					{% endif %}
-					{% if row[2]!='' %}
+					{% if row[3]!='' %}
 						
 							</div>
 						
@@ -26,15 +17,15 @@
 						<div class="item seperator">
 							
 							{% set lab = "AM" %}
-							{% if row[2]> 12 %}
+							{% if row[3]> 12 %}
 								{% set lab = "PM" %}
 							{% endif %}
 							
-							<div>{{ row[2] }}{{ lab }}</div>
+							<div>{{ row[3] }}{{ lab }}</div>
 						</div>
 						
 					{% endif %}
-					<div class="item item-{{ color }}" style="height:{{ h }}px;" title="{{ row[0] }} - {{ row[1] }}"></div>
+					<div class="item item-{{ row[2] }}" style="height:{{ h }}px;" title="{{ row[0] }} - {{ row[1] }}"></div>
 				{% endfor %}
 						</div>
 			</div>
