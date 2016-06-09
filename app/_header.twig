@@ -14,7 +14,7 @@
 			<p class="form-control-static" style="margin-left:50px;">{{ data[0][0] }} - to - {{ data|last[0] }}</p>
 			<p class="form-control-static" style="margin-left:50px;"><strong>{{ stats['failed'] }}</strong>
 				failed of <strong>{{ stats['total'] }}</strong>
-				= <strong>{{ stats['percent'] }}%</strong>
+				= <strong>{{ stats['percent']|number_format(2, '.') }}%</strong>
 				down</p>
 			<label for="scale" style="margin-left:20px;" class="pull-right" >
 			<input type="checkbox" id="scale" name="scale" value="1"/> <i class="fa fa-expand"></i>
