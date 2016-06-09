@@ -1,6 +1,11 @@
 <section class="section">
 	<div id="chart-area">
 		<div id="inner">
+			
+			{% if max > 200 %}
+				{% set max = 200 %}
+			{% endif %}
+			
 			<div style="height: {{ max }}px;">
 				<div>
 				{% for row in data %}
@@ -25,6 +30,11 @@
 						</div>
 						
 					{% endif %}
+							{% if h > 200 %}
+								{% set h = 200 %}
+							{% endif %}	
+					
+							
 					<div class="item item-{{ row[2] }}" style="height:{{ h }}px;" title="{{ row[0] }} - {{ row[1] }}"></div>
 				{% endfor %}
 						</div>
