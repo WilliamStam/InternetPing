@@ -3,7 +3,7 @@ $(document).ready(function(){
 	$("#logfile-select").on("change",function(){
 		window.location = "/?log="+$(this).val();
 		
-	});
+	}).select2();
 	$("#scale").on("change",function(){
 		scale()	
 	});
