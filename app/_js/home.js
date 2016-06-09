@@ -29,7 +29,7 @@ $(document).ready(function(){
 	
 	$(document).on("mousewheel","#chart-area",function(event, delta) {
 		
-		this.scrollLeft -= (delta * 30);
+		this.scrollLeft -= (delta * 100);
 		
 		event.preventDefault();
 		
