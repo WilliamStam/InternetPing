@@ -4,6 +4,9 @@ $(document).ready(function(){
 		window.location = "/?log="+$(this).val();
 		
 	});
+	$("#scale").on("change",function(){
+		scale()	
+	});
 	
 	$(document).on("click",".hour",function(){
 		var cw = $(this).attr("data-width");
@@ -45,6 +48,13 @@ function scale(){
 	var cw = $inner.outerWidth();
 	
 	var sc = (ww / cw);
+	
+	if ($("#scale").is(":checked")){
+		
+	} else {
+		sc = 1;
+	}
+	
 	$inner.css({
 		"transform": "scaleX("+sc+")"
 	})
