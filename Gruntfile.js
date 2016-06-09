@@ -4,6 +4,7 @@ var jsfile = [
 	'vendor/components/bootstrap/js/bootstrap.js' ,
 	'vendor/components/modernizr/modernizr.js',
 	'vendor/ivaynberg/select2/dist/js/select2.full.min.js',
+	'app/_js/plugins/jquery.mousewheel.js',
 	'app/_js/app.js'
 ];
 

@@ -27,6 +27,15 @@ $(document).ready(function(){
 		scale();
 	});
 	
+	$(document).on("mousewheel","#chart-area",function(event, delta) {
+		
+		this.scrollLeft -= (delta * 30);
+		
+		event.preventDefault();
+		
+	});
+	
+	$( "#chart-area" ).scrollLeft( 30000 );
 	
 	scale();
 	
