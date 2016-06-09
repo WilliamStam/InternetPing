@@ -15,7 +15,11 @@
 			<p class="form-control-static" style="margin-left:50px;"><strong>{{ stats['failed'] }}</strong>
 				failed of <strong>{{ stats['total'] }}</strong>
 				= <strong>{{ stats['percent']|number_format(2, '.') }}%</strong>
-				down</p>
+				down
+				<em style="margin-left:20px;"><span title="{{ stats['workday']['total'] }} total | {{ stats['workday']['failed'] }} failed">(<strong>{{ stats['workday']['percent']|number_format(2, '.') }}%</strong>
+				 between 8-17)</span></em>
+			
+			</p>
 			<label for="scale" style="margin-left:20px;" class="pull-right" >
 			<input type="checkbox" id="scale" name="scale" value="1"/> <i class="fa fa-expand"></i>
 				</label>
