@@ -126,7 +126,7 @@ class home extends _ {
 		
 		
 		
-		//test_array($t); 
+		//test_array($stages); 
 		
 		$tmpl = new \template("template.twig");
 		$tmpl->page = array(

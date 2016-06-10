@@ -16,6 +16,8 @@
    transform-origin: 0 0;
    height:100%;
    display: inline-block;
+   position:relative;
+   z-index: 1;
    &:hover {
      cursor:pointer;
      background: #f1f1f1;
@@ -49,8 +51,17 @@
       
      
     }
+   
+    
   }
-
+  .horizontal-lines {
+    position:absolute;
+    z-index: 0;
+    left:0;
+    right:0;
+    border-bottom:1px dotted #ccc;
+    height:1px;
+  }
   
 }
 

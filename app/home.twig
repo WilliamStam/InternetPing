@@ -5,8 +5,20 @@
 			{% if max > 200 %}
 				{% set max = 200 %}
 			{% endif %}
+			{% set blockh = max + 1 %}
+			<div style="height: {{ blockh }}px; position:relative">
+				{% for key,row in stages %}
+					{% set b = 0 %}
+					{% if key != "failed" %}
+						{% set b = key|split('-') %}
+						{% set b = b[0] %}
+						{% set b = b|replace({'+':''}) %}
+						<div class="horizontal-lines line{{ loop.index0 }}" style="bottom:{{ b }}px">|{{ b }}|</div>
+					{% endif %}
+				{% endfor %}
+				
 			
-			<div style="height: {{ max }}px;">
+				
 				<div>
 				{% for row in data %}
 					{% set h = row[1] %}
