@@ -8,7 +8,10 @@ $(document).ready(function(){
 		scale()	
 	});
 	
-	$(document).on("click",".hour",function(){
+	$(document).on("click",".hour:not(.viewing)",function(){
+		var pos = $( "#chart-area" ).scrollLeft();
+		$(this).attr("data-left",pos);
+		
 		var cw = $(this).attr("data-width");
 		var $inner = $("#inner");
 		var ww = $(window).width();
@@ -21,15 +24,19 @@ $(document).ready(function(){
 		$(this).addClass("viewing").show();
 		
 	});
-	$(document).on("click",".hour.viewing",function(){
+	$(document).on("click",".hour.viewing",function(e){
+		var $this = $(this);
+		var pos = $this.attr("data-left");
 		$(".hour.viewing").removeClass("viewing");
 		$(".hour").show();
 		scale();
+		$( "#chart-area" ).scrollLeft( pos );
+		$this.removeAttr("data-left")
 	});
 	
 	$(document).on("mousewheel","#chart-area",function(event, delta) {
 		
-		this.scrollLeft -= (delta * 100);
+		this.scrollLeft -= (delta * 500);
 		
 		event.preventDefault();
 		

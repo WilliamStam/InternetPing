@@ -6,6 +6,17 @@
   div#inner {
     transform-origin: 0 0;
     float: left;
+  
+    .horizontal-lines {
+      position:absolute;
+      z-index: 0;
+      left:0;
+      right:0;
+      border-bottom:1px dotted #ccc;
+      height:1px;
+    }
+    
+    
     &:hover {
       .hour {
         opacity:0.3;
@@ -16,8 +27,6 @@
    transform-origin: 0 0;
    height:100%;
    display: inline-block;
-   position:relative;
-   z-index: 1;
    &:hover {
      cursor:pointer;
      background: #f1f1f1;
@@ -29,7 +38,8 @@
    
     vertical-align: bottom;
     width:1px;
-    
+    position:relative;
+    z-index: 10;
    margin-right:0px;
   }
   .seperator {
@@ -54,14 +64,7 @@
    
     
   }
-  .horizontal-lines {
-    position:absolute;
-    z-index: 0;
-    left:0;
-    right:0;
-    border-bottom:1px dotted #ccc;
-    height:1px;
-  }
+ 
   
 }
 

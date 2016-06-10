@@ -8,6 +8,14 @@
   transform-origin: 0 0;
   float: left;
 }
+#chart-area div#inner .horizontal-lines {
+  position: absolute;
+  z-index: 0;
+  left: 0;
+  right: 0;
+  border-bottom: 1px dotted #ccc;
+  height: 1px;
+}
 #chart-area div#inner:hover .hour {
   opacity: 0.3;
 }
@@ -15,8 +23,6 @@
   transform-origin: 0 0;
   height: 100%;
   display: inline-block;
-  position: relative;
-  z-index: 1;
 }
 #chart-area .hour:hover {
   cursor: pointer;
@@ -27,6 +33,8 @@
   display: inline-block;
   vertical-align: bottom;
   width: 1px;
+  position: relative;
+  z-index: 10;
   margin-right: 0px;
 }
 #chart-area .seperator {
@@ -44,14 +52,6 @@
   font-size: 11px;
   font-weight: bold;
   transform: translateX(-50%) translateY(-50%) rotate(-90deg);
-}
-#chart-area .horizontal-lines {
-  position: absolute;
-  z-index: 0;
-  left: 0;
-  right: 0;
-  border-bottom: 1px dotted #ccc;
-  height: 1px;
 }
 #footer .item {
   width: 20px;
