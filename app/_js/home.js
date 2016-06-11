@@ -37,9 +37,7 @@ $(document).ready(function(){
 	$(document).on("mousewheel","#chart-area",function(event, delta) {
 		
 		this.scrollLeft -= (delta * 500);
-		
 		event.preventDefault();
-		
 	});
 	
 	$( "#chart-area" ).scrollLeft( 30000 );
