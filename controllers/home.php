@@ -16,7 +16,7 @@ class home extends _ {
 			$logs[] = str_replace($folder,"",$log);
 			
 		}
-		
+		rsort($logs);
 		$stages = array(
 			"0-20"=>"#00ff00",
 			"20-50"=>"#88ff44",
